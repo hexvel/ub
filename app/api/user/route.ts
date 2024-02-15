@@ -2,7 +2,7 @@ import { PrismaClient } from '@prisma/client'
 
 const prisma = new PrismaClient()
 
-export default async function GET(request: Request) {
+export async function GET(request: Request) {
 	await prisma.$connect()
 	const users = prisma.users.create({
 		data: {
