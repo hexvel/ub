@@ -2,7 +2,7 @@ import type { NextAuthOptions } from 'next-auth'
 import NextAuth from 'next-auth'
 import VkProvider from 'next-auth/providers/vk'
 
-export const authOptions: NextAuthOptions = {
+const authOptions: NextAuthOptions = {
 	providers: [
 		VkProvider({
 			clientId: process.env.VK_CLIENT_ID as string,
